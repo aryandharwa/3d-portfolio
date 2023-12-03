@@ -13,7 +13,13 @@ import { a } from "@react-spring/three"
 
 import islandScene from "../assets/3d/island.glb";
 
-const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props}) => {
+const Island = ({ 
+  isRotating, 
+  setIsRotating, 
+  setCurrentStage, 
+  currentFocusPoint,
+  ...props
+}) => {
     const islandRef = useRef();
 
     const {gl, viewport} = useThree();
@@ -31,13 +37,13 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props}) => {
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
 
         lastX.current = clientX;
-    }
+    };
 
     const handlePointerUp = (e) => {
         e.stopPropagation();
         e.preventDefault();
         setIsRotating(false);
-    }
+    };
 
     const handlePointerMove = (e) => {
         e.stopPropagation();
@@ -46,47 +52,47 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props}) => {
         if(isRotating) {
           const clientX = e.touches ? e.touches[0].clientX : e.clientX;
 
-          const delta = (client - lastX.current) / viewport.width;
+          const delta = (clientX - lastX.current) / viewport.width;
   
           islandRef.current.rotation.y += delta * 0.01 * Math.PI;
           lastX.current = clientX;
           rotationSpeed.current = delta * 0.01 * Math.PI;
         }
-    }
+    };
 
     const handleKeyDown = (e) => {
       if(e.key === "ArrowLeft") {
         if(!isRotating) setIsRotating(true);
-        islandRef.current.rotation.y += 0.01 * Math.PI;
-        rotationSpeed.current = 0.0125;
+        islandRef.current.rotation.y += 0.005 * Math.PI;
+        rotationSpeed.current = 0.007;
       } else if (e.key === "ArrowRight") {
         if(!isRotating) setIsRotating(true);
-        islandRef.current.rotation.y -= 0.01 * Math.PI;
-        rotationSpeed.current = -0.0125;
+        islandRef.current.rotation.y -= 0.005 * Math.PI;
+        rotationSpeed.current = -0.007;
       }
-    }
+    };
 
     const handleKeyUp = (e) => {
       if(e.key === "ArrowLeft" || e.key === "ArrowRight" ) {
         setIsRotating(false);
       }
-    }
+    };
 
     useEffect(() => {
       const canvas = gl.domElement;       
         canvas.addEventListener('pointerdown', handlePointerDown);
         canvas.addEventListener('pointerup', handlePointerUp);
         canvas.addEventListener('pointermove', handlePointerMove);
-        document.addEventListener('keydown', handleKeyDown);
-        document.addEventListener('keyup', handleKeyUp);
+        window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('keyup', handleKeyUp);
 
         return () => {
           canvas.removeEventListener('pointerdown', handlePointerDown);
           canvas.removeEventListener('pointerup', handlePointerUp);
           canvas.removeEventListener('pointermove', handlePointerMove);
-          document.removeEventListener('keydown', handleKeyDown);
-          document.removeEventListener('keyup', handleKeyUp);
-        }
+          window.removeEventListener('keydown', handleKeyDown);
+          window.removeEventListener('keyup', handleKeyUp);
+        };
         
     }, [gl, handlePointerDown, handlePointerUp, handlePointerMove]);
 

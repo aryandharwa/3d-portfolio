@@ -7,6 +7,7 @@ import Bird from '../models/Bird'
 import Plane from '../models/Plane'
 import HomeInfo from '../components/HomeInfo'
 import sakura from "../assets/sakura.mp3"
+import { soundoff, soundon } from '../assets/icons'
 
 const Home = () => {
 
@@ -31,7 +32,7 @@ const Home = () => {
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
         let screenPosition = [0, -6.5, -43];
-        let rotation = [0.1, 4.7, 0]
+        // let rotation = [0.1, 4.7, 0]
 
         if(window.innerWidth < 768) {
             screenScale = [0.9, 0.9, 0.9];
@@ -39,10 +40,8 @@ const Home = () => {
             screenScale = [1, 1, 1];
         }
 
-        return [screenScale, screenPosition, rotation]
+        return [screenScale, screenPosition]
     }
-
-    const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize();
 
     const adjustPlaneForScreenSize = () => {
         let screenScale, screenPosition;
@@ -56,8 +55,9 @@ const Home = () => {
         }
 
         return [screenScale, screenPosition]
-    }
+    };
 
+    const [islandScale, islandPosition] = adjustIslandForScreenSize();
     const [planeScale, planePosition] = adjustPlaneForScreenSize();
 
   return (
@@ -67,7 +67,7 @@ const Home = () => {
             {currentStage && <HomeInfo currentStage = {currentStage} />}
         </div>
 
-        <Canvas className={"w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}"}
+        <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
                 camera={{ near: 0.1, far: 1000 }}
         >
             <Suspense fallback={<Loader />}>
@@ -80,7 +80,7 @@ const Home = () => {
                 <Island 
                     position = {islandPosition}
                     scale = {islandScale}
-                    rotation = {islandRotation}
+                    rotation = {[0.1, 4.7, 0]}
                     isRotating = {isRotating}
                     setIsRotating = {setIsRotating}
                     setCurrentStage = {setCurrentStage}
@@ -89,10 +89,20 @@ const Home = () => {
                     isRotating = {isRotating}
                     scale= {planeScale}
                     position = {planePosition}
-                    rotation = {[0, 20, 0]}
+                    rotation = {[0, 20.1, 0]}
                 />
             </Suspense>
         </Canvas>
+
+        <div className='absolute bottom-2 left-2'>
+            <img 
+                src = {!isPlayingMusic ? soundoff : soundon}
+                alt = 'Sound'
+                className='w-10 h-10 cursor-pointer object-contain'
+                onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+            />
+        </div>
+
     </section>
   )
 }
