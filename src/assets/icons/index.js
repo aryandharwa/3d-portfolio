@@ -26,6 +26,10 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import figma from './figma.svg'
+import chatIcon from './chatIcon.svg'
+import bookIcon from './bookIcon.svg'
+import youtubeIcon from './youtubeIcon.svg'
 
 export {
     css,
@@ -55,5 +59,9 @@ export {
     arrow,
     contact,
     soundon,
-    soundoff
+    soundoff,
+    figma,
+    chatIcon,
+    bookIcon,
+    youtubeIcon
 }

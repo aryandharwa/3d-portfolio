@@ -13,8 +13,8 @@ const About = () => {
       </h1>
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-        <p>Software Engineer based in India, specializing in technical
-          education through hands-on learning and building applications.
+        <p>
+          Full Stack Web Developer and UI Designer based in India. Creating user-friendly digital experiences that blend tech and creativity is my forte. Let's craft something awesome together!
         </p>
       </div>
 
@@ -41,7 +41,7 @@ const About = () => {
         <h3 className='subhead-text'>Work Experience</h3>
 
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-          <p>I've worked with all sorts of companies, leveling up my skills and
+          <p>I've worked on a lot of projects, leveling up my skills and
             teaming up with smart people. Here's the rundown:
           </p>
         </div>

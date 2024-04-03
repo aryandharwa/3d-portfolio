@@ -1,9 +1,7 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { hyperloop, rendevous, tryst, literacyApp} from "../assets/images";
 import {
-    car,
     contact,
     css,
-    estate,
     express,
     git,
     github,
@@ -11,30 +9,51 @@ import {
     javascript,
     linkedin,
     mongodb,
-    motion,
-    mui,
     nextjs,
     nodejs,
-    pricewise,
     react,
-    redux,
-    sass,
-    snapgram,
-    summiz,
     tailwindcss,
-    threads,
-    typescript
+    typescript,
+    figma,
+    chatIcon,
+    bookIcon,
+    youtubeIcon,
 } from "../assets/icons";
 
 export const skills = [
+    {
+        imageUrl: html,
+        name: "HTML",
+        type: "Frontend",
+    },
     {
         imageUrl: css,
         name: "CSS",
         type: "Frontend",
     },
     {
+        imageUrl: javascript,
+        name: "JavaScript",
+        type: "Frontend",
+    },
+    {
+        imageUrl: react,
+        name: "React",
+        type: "Frontend",
+    },
+    {
         imageUrl: express,
         name: "Express",
+        type: "Backend",
+    },
+    {
+        imageUrl: mongodb,
+        name: "MongoDB",
+        type: "Database",
+    },
+    {
+        imageUrl: nodejs,
+        name: "Node.js",
         type: "Backend",
     },
     {
@@ -48,55 +67,10 @@ export const skills = [
         type: "Version Control",
     },
     {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
-    },
-    {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
-    },
-    {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
         imageUrl: nextjs,
         name: "Next.js",
         type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
+    }, 
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
@@ -106,125 +80,107 @@ export const skills = [
         imageUrl: typescript,
         name: "TypeScript",
         type: "Frontend",
+    },
+    {
+        imageUrl: figma,
+        name: "Figma",
+        type: "Design",
     }
+
 ];
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        title: "Front-End Developer",
+        company_name: "Infinity Hyperloop",
+        icon: hyperloop,
+        iconBg: "#8F8F8F",
+        date: "June 2023 - August 2023",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Collaborating with cross-functional teams including designers, product managers, and other developers.",
+            "Implementing responsive design and ensuring cross-browser compatibility."
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Front-End Developer",
+        company_name: "RendevousX",
+        icon: rendevous,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "August 2023 - October 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Building and managing web applications with a focus on React.js, Typescript and associated technologies.",
+            "Working closely with diverse teams, including designers, and fellow developers,",
+            "Executing responsive design principles and guaranteeing compatibility across different web browsers."
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        title: "Full-Stack Web Developer",
+        company_name: "Literacy App",
+        icon: literacyApp,
+        iconBg: "#FFE8A0",
+        date: "Jan 2024 - Feb 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Participated in a hackathon, our aim was to develop an interactive website for Telangana students under the Foundational Literacy & Numeracy Program.",
+            "Utilized React.js and Node.js for seamless integration, Axios for API data exchange, and Splinetool for immersive 3D elements.",
+            "Project was aimed to enhance education through technology, fostering innovation and collaboration in addressing real-world challenges."
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        title: "Front-End Web Developer",
+        company_name: "Tryst 2024",
+        icon: tryst,
+        iconBg: "#030A17",
+        date: "Jan 2024 - March 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Building and sustaining web applications utilizing React.js.",
+            "Collaborating with other verticals such as designers, marketing team and fellow developers.",
+            "Designing built-in games and incorporating spline for a 3D aesthetic."
         ],
     },
 ];
 
 export const socialLinks = [
     {
-        name: 'Contact',
+        name: 'Aryan Dharwa',
         iconUrl: contact,
         link: '/contact',
     },
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/aryandharwa',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/aryan-dharwa',
     }
 ];
 
 export const projects = [
     {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
-    },
-    {
-        iconUrl: threads,
+        iconUrl: chatIcon,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'Chat Application',
+        description: 'Developed a web chat application facilitating seamless communication between users, boasting robust features for real-time messaging, and emoji sharing.',
+        link: 'https://github.com/aryandharwa/chat-app.git',
     },
     {
-        iconUrl: car,
+        iconUrl: bookIcon,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'Literacy App',
+        description: 'Developed an immersive literacy web app within an intense 48-hour timeframe. Our website empowers students with interactive testing features, designed to engage and enhance their learning experience, aligning seamlessly with educational goals.',
+        link: 'https://github.com/aryandharwa/LiteracyApp.git',
     },
     {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        iconUrl: youtubeIcon,
+        theme: 'btn-back-red',
+        name: 'Youtube Backend Clone',
+        description: 'Created backend clone of YouTube, harnessing cutting-edge technologies to replicate core functionalities. Our solution offers seamless video uploading, content management, and user interaction',
+        link: 'https://github.com/aryandharwa/youtube-clone-backend.git',
     },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
+    
 ];
 
 
