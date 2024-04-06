@@ -101,6 +101,8 @@ export const experiences = [
             "Collaborating with cross-functional teams including designers, product managers, and other developers.",
             "Implementing responsive design and ensuring cross-browser compatibility."
         ],
+        link: "https://infinityhyperloop.iitd.ac.in/",
+        linkText: "Live Link",
     },
     {
         title: "Front-End Developer",
@@ -113,18 +115,23 @@ export const experiences = [
             "Working closely with diverse teams, including designers, and fellow developers,",
             "Executing responsive design principles and guaranteeing compatibility across different web browsers."
         ],
+        link: "",
+        linkText: "",
     },
     {
         title: "Full-Stack Web Developer",
-        company_name: "Literacy App",
+        company_name: "Literacy App (Desktop Version)",
         icon: literacyApp,
         iconBg: "#FFE8A0",
         date: "Jan 2024 - Feb 2024",
         points: [
             "Participated in a hackathon, our aim was to develop an interactive website for Telangana students under the Foundational Literacy & Numeracy Program.",
             "Utilized React.js and Node.js for seamless integration, Axios for API data exchange, and Splinetool for immersive 3D elements.",
-            "Project was aimed to enhance education through technology, fostering innovation and collaboration in addressing real-world challenges."
+            "Project was aimed to enhance education through technology, fostering innovation and collaboration in addressing real-world challenges.",
+            "Project was to made strictly in desktop view only, as tests will we given on desktops."
         ],
+        link: "https://literacy-app.vercel.app/",
+        linkText: "Live Link",
     },
     {
         title: "Front-End Web Developer",
@@ -137,6 +144,8 @@ export const experiences = [
             "Collaborating with other verticals such as designers, marketing team and fellow developers.",
             "Designing built-in games and incorporating spline for a 3D aesthetic."
         ],
+        link: "https://www.tryst-iitd.org/",
+        linkText: "Live Link", 
     },
 ];
 
